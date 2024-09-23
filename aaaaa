@@ -1,0 +1,116 @@
+//Name:Moyu Wu
+//Start Date:
+//End Date:
+//Description-This program will ask the user to enter the course name, how many minutes do they spend on this course a day, average of homework grade, average of quiz grade, average grade of exam grade, and the program will average the final grade for them and tell the user whether they passed the class or not.
+
+
+package Project_Grade;
+
+import java.util.Scanner;
+
+public class Project_Grade {
+	static String course;
+	static double hwgrade1, hwgrade2, hwgrade3, hwgrade4, hwgrade5, hwgrade;
+	
+	public static void main(String[] args) {
+		System.out.println("");
+	}
+//Course name
+	static void course(){
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the course name");
+		course = input.nextLine();
+//Check the course name
+		if (course.isEmpty()) {
+			System.out.println("It's invalid. Please enter again.");
+			course();
+		}
+		else
+		{
+			hwgrade1();
+		}
+	}
+//Homework grade 1
+	static void hwgrade1() {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the first homework grade");
+		hwgrade1 = input.nextDouble();
+//Check the homework grade 1
+		if (hwgrade1 > 100 || hwgrade1 < 0) {
+			System.out.println("It's invalid, Please enter again.");
+			hwgrade1();
+		}
+		
+		else
+		{
+			hwgrade2();
+		}
+		
+	}
+//Homework grade 2
+	static void hwgrade2() {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the second homework grade");
+		hwgrade2 = input.nextDouble();
+//Check the homework grade 2
+		if (hwgrade2 > 100 || hwgrade2 < 0) {
+			System.out.println("It's invalid, Please enter again.");
+			hwgrade2();
+		}
+		
+		else
+		{
+			hwgrade3();
+		}
+	}
+	//Homework grade 3
+		static void hwgrade3() {
+			Scanner input = new Scanner(System.in);
+			System.out.println("Enter the second homework grade");
+			hwgrade3 = input.nextDouble();
+	//Check the homework grade 3
+			if (hwgrade3 > 100 || hwgrade3 < 0) {
+				System.out.println("It's invalid, Please enter again.");
+				hwgrade3();
+			}
+			
+			else
+			{
+				hwgrade4();
+			}
+		}
+		
+	//Homework grade 4
+	static void hwgrade4() {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the second homework grade");
+		hwgrade4 = input.nextDouble();
+	//Check the homework grade 4
+		if (hwgrade4 > 100 || hwgrade4 < 0) {
+			System.out.println("It's invalid, Please enter again.");
+			hwgrade4();
+		}
+			
+		else
+		{
+			hwgrade5();
+		}
+		
+	//Homework grade 5
+	static void hwgrade5() {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the second homework grade");
+		hwgrade2 = input.nextDouble();
+	//Check the homework grade 2
+		if (hwgrade2 > 100 || hwgrade2 < 0) {
+			System.out.println("It's invalid, Please enter again.");
+			hwgrade2();
+		}
+			
+		else
+		{
+			hwgrade3();
+		}
+	}
+//End
+}
