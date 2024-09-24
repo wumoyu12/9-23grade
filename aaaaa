@@ -9,108 +9,144 @@ package Project_Grade;
 import java.util.Scanner;
 
 public class Project_Grade {
-	static String course;
-	static double hwgrade1, hwgrade2, hwgrade3, hwgrade4, hwgrade5, hwgrade;
-	
-	public static void main(String[] args) {
-		System.out.println("");
-	}
-//Course name
-	static void course(){
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the course name");
-		course = input.nextLine();
-//Check the course name
-		if (course.isEmpty()) {
-			System.out.println("It's invalid. Please enter again.");
-			course();
-		}
-		else
-		{
-			hwgrade1();
-		}
-	}
-//Homework grade 1
-	static void hwgrade1() {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the first homework grade");
-		hwgrade1 = input.nextDouble();
-//Check the homework grade 1
-		if (hwgrade1 > 100 || hwgrade1 < 0) {
-			System.out.println("It's invalid, Please enter again.");
-			hwgrade1();
-		}
-		
-		else
-		{
-			hwgrade2();
-		}
-		
-	}
-//Homework grade 2
-	static void hwgrade2() {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the second homework grade");
-		hwgrade2 = input.nextDouble();
-//Check the homework grade 2
-		if (hwgrade2 > 100 || hwgrade2 < 0) {
-			System.out.println("It's invalid, Please enter again.");
-			hwgrade2();
-		}
-		
-		else
-		{
-			hwgrade3();
-		}
-	}
-	//Homework grade 3
-		static void hwgrade3() {
-			Scanner input = new Scanner(System.in);
-			System.out.println("Enter the second homework grade");
-			hwgrade3 = input.nextDouble();
-	//Check the homework grade 3
-			if (hwgrade3 > 100 || hwgrade3 < 0) {
-				System.out.println("It's invalid, Please enter again.");
-				hwgrade3();
-			}
-			
-			else
-			{
-				hwgrade4();
-			}
-		}
-		
-	//Homework grade 4
-	static void hwgrade4() {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the second homework grade");
-		hwgrade4 = input.nextDouble();
-	//Check the homework grade 4
-		if (hwgrade4 > 100 || hwgrade4 < 0) {
-			System.out.println("It's invalid, Please enter again.");
-			hwgrade4();
-		}
-			
-		else
-		{
-			hwgrade5();
-		}
-		
-	//Homework grade 5
-	static void hwgrade5() {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the second homework grade");
-		hwgrade2 = input.nextDouble();
-	//Check the homework grade 2
-		if (hwgrade2 > 100 || hwgrade2 < 0) {
-			System.out.println("It's invalid, Please enter again.");
-			hwgrade2();
-		}
-			
-		else
-		{
-			hwgrade3();
-		}
-	}
+  static void course(){
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter the course name");
+    course = input.nextLine();
+  //Check the course name
+    if (course.isEmpty()) {
+      System.out.println("It's invalid. Please enter again.");
+      course();
+    }
+    else
+    {
+      hwgrade1();
+    }
+  }
+    //Homework grade 1
+  static void hwgrade1() {
+    Scanner input = new Scanner(System.in);
+      System.out.println("Enter the first homework grade");
+      hwgrade1 = input.nextInt();
+    //Check the homework grade 1
+      if (hwgrade1 > 100 || hwgrade1 < 0) {
+        System.out.println("It's invalid, Please enter again.");
+        hwgrade1();
+      }
+      else
+      {
+        hwgrade2();
+      }
+
+    }
+    //Homework grade 2
+  static void hwgrade2() {
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter the second homework grade");
+    hwgrade2 = input.nextInt();
+    //Check the homework grade 2
+    if (hwgrade2 > 100 || hwgrade2 < 0) {
+      System.out.println("It's invalid, Please enter again.");
+      hwgrade2();
+    }
+
+    else
+    {
+      hwgrade3();
+    }
+  }
+      //Homework grade 3
+  static void hwgrade3() {
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter the third homework grade");
+    hwgrade3 = input.nextInt();
+    //Check the homework grade 3
+    if (hwgrade3 > 100 || hwgrade3 < 0) {
+      System.out.println("It's invalid, Please enter again.");
+      hwgrade3();
+    }
+
+    else
+    {
+      hwgrade4();
+    }
+  }
+
+  //Homework grade 4
+  static void hwgrade4() {
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter the fourth homework grade");
+    hwgrade4 = input.nextInt();
+    //Check the homework grade 4
+    if (hwgrade4 > 100 || hwgrade4 < 0) {
+      System.out.println("It's invalid, Please enter again.");
+      hwgrade4();
+    }
+
+    else
+    {
+      hwgrade = (hwgrade1 + hwgrade2 + hwgrade3 + hwgrade4)/4;
+      System.out.println("The average of your homework grade is " + hwgrade + ".");
+      quize1();
+    }
+  }
+//quiz grade 1
+  static void quize1(){
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter the first quize grade");
+    qgrade1 = input.nextDouble();
+//Check the quize grade 1
+    if (qgrade1 > 100 || qgrade1 < 0) {
+      System.out.println("It's invalid, Please enter again.");
+      quize1();
+    }
+
+    else
+    {
+      quize2();
+    }
+  }
+
+  static void quize2(){
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter the second quize grade");
+    qgrade2 = input.nextDouble();
+//Check the quize grade 2
+    if (qgrade2 > 100 || qgrade2 < 0) {
+      System.out.println("It's invalid, Please enter again.");
+      quize2();
+    }
+
+    else
+    {
+      qgrade = (qgrade1 + qgrade2)/2;
+      System.out.println("The average of your quize grade is " + qgrade + ".");
+      fnexam();
+    }
+  }
+
+  static void fnexam(){
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter the final exam grade");
+    exgrade = input.nextDouble();
+    if (exgrade > 100 || exgrade < 0){
+      System.out.println("It's invalid, Please enter again.");
+      fnexam();
+    }
+    else{
+      System.out.println("Your final exam grade is " + exgrade + ".");
+      time();
+    }
+  }
+  static void time(){
+    Scanner input = new Scanner(System.in);
+    System.out.println("What is the average minuets do you spend on this course in a day");
+    time = input.nextInt();
+  }
+  
+  static void finalgrade(){
+    finalgrade = (hwgrade * 0.1) + (qgrade * 0.4) + (exgrade * 0.5);
+    System.out.println("Your final grade is " + finalgrade + ".");
+  }
 //End
 }
